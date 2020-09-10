@@ -22,8 +22,8 @@ public class ListaMatricula {
     }
     
     public ArrayList<Matricula> getMatricula() {
-        if(Matricula == null) return new ArrayList<>();
-        else return Matricula;
+        if(Matricula == null) { return new ArrayList<Matricula>(); }
+        else { return Matricula;}
     }
 
     public void setMatricula(ArrayList<Matricula> Matricula) {

@@ -357,6 +357,21 @@
                                             <option value="10">Grado 10</option>
                                             <option value="11" selected>Grado 11</option>    
                                             ';
+                                        }else{
+                                            echo '
+                                            
+                                            <option value="1">Grado 1</option>
+                                            <option value="2">Grado 2</option>
+                                            <option value="3">Grado 3</option>
+                                            <option value="4">Grado 4</option>
+                                            <option value="5">Grado 5</option>
+                                            <option value="6">Grado 6</option>
+                                            <option value="7">Grado 7</option>
+                                            <option value="8">Grado 8</option>
+                                            <option value="9">Grado 9</option>
+                                            <option value="10">Grado 10</option>
+                                            <option value="11">Grado 11</option>    
+                                            ';
                                         }
                                   echo '  </select>
                                     <input type="text" name="ppcedula" id="ppcedula" style="display:none;" value="'.$document.'">

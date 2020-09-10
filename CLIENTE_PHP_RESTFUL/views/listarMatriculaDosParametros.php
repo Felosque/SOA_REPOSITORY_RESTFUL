@@ -145,7 +145,7 @@
                                         </div>
                                             ';
                                     }else{
-                                        if($valuestate == true && $valselect == true){
+                                        if($valuestate == true && $valselect == true && $buscar_matr_est != null || $buscar_matr_est['Matricula'] != null){
                                             if( count($buscar_matr_est) == 1 && 
                                             count($buscar_matr_est['Matricula']) >= 8 && 
                                             count($buscar_matr_est['Matricula']) < 9){
@@ -220,7 +220,7 @@
                                         }else{
                                             echo '
                                             <div class="alert alert-danger" alert-dismissible fade show" role="alert">
-                                                <strong>Lo siento!</strong> Debes seleccionar el estado.
+                                                <strong>Lo siento!</strong> Debes seleccionar algun filtro.
                                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>

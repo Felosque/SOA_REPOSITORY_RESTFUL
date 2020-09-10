@@ -47,7 +47,8 @@ public class ServicioLocalMatricula {
     }
     
     public static int actualizarMatricula(Matricula pMatricula){
-            return RequestJson.sendRequest(pMatricula.toJSON(), actualizarMatricula, RequestJson.PUT);
+        System.out.println(""+ pMatricula.toJSON());
+            return RequestJson.sendRequest(pMatricula.toJSON(), actualizarMatricula, RequestJson.POST);
     }
     
     public static int borrarMatriculaCodigo(String pCodigo){
@@ -62,7 +63,8 @@ public class ServicioLocalMatricula {
         ListaMatricula matriculas = new ListaMatricula();
         try{
             matriculas = gson.fromJson(matriculasJSON, ListaMatricula.class);
-            return matriculas.getMatricula();
+            if(matriculas == null) return new ArrayList<>();
+            else return matriculas.getMatricula();
         }catch(JsonSyntaxException ex){
             ArrayList<Matricula> matricula = new ArrayList<>();
             StringBuilder matriculaJSON = new StringBuilder(matriculasJSON);
@@ -80,7 +82,8 @@ public class ServicioLocalMatricula {
         ListaMatricula matriculas = new ListaMatricula();
         try{
             matriculas = gson.fromJson(matriculasJSON, ListaMatricula.class);
-            return matriculas.getMatricula();
+            if(matriculas == null) return new ArrayList<>();
+            else return matriculas.getMatricula();
         }catch(JsonSyntaxException ex){
             ArrayList<Matricula> matricula = new ArrayList<>();
             StringBuilder matriculaJSON = new StringBuilder(matriculasJSON);
@@ -98,7 +101,8 @@ public class ServicioLocalMatricula {
         ListaMatricula matriculas = new ListaMatricula();
         try{
             matriculas = gson.fromJson(matriculasJSON, ListaMatricula.class);
-            return matriculas.getMatricula();
+            if(matriculas == null) return new ArrayList<>();
+            else return matriculas.getMatricula();
         }catch(JsonSyntaxException ex){
             ArrayList<Matricula> matricula = new ArrayList<>();
             StringBuilder matriculaJSON = new StringBuilder(matriculasJSON);
@@ -132,7 +136,8 @@ public class ServicioLocalMatricula {
         ListaMatricula matriculas = new ListaMatricula();
         try{
             matriculas = gson.fromJson(matriculasJSON, ListaMatricula.class);
-            return matriculas.getMatricula();
+            if(matriculas == null) return new ArrayList<>();
+            else return matriculas.getMatricula();
         }catch(JsonSyntaxException ex){
             ArrayList<Matricula> matricula = new ArrayList<>();
             StringBuilder matriculaJSON = new StringBuilder(matriculasJSON);

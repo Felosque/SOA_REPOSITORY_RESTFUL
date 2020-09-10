@@ -37,33 +37,34 @@ public class JDialogListarMatriculasTodas extends javax.swing.JFrame {
         DefaultTableModel modelo = (DefaultTableModel)tablaDatos.getModel();
         modelo.getDataVector().removeAllElements();
         revalidate();
+        if(matriculas != null){
+            for (int i = 0; i < matriculas.size(); i++) {
+                Vector fila = new Vector();
+                fila.add(matriculas.get(i).getCodigo());
+                fila.add(matriculas.get(i).getPkEstudiante());
+                fila.add(matriculas.get(i).getPkMateria());
 
-        for (int i = 0; i < matriculas.size(); i++) {
-            Vector fila = new Vector();
-            fila.add(matriculas.get(i).getCodigo());
-            fila.add(matriculas.get(i).getPkEstudiante());
-            fila.add(matriculas.get(i).getPkMateria());
-           
-            //fila.add(ServicioLocalEstudiante.getServicio().buscarEstudiante(matriculas.get(i).getPkEstudiante()).getNombres());
-            //fila.add(ServicioLocalMateria.getServicio().darMateriaPorCodigo(matriculas.get(i).getPkMateria()).getNombre());
-            fila.add(matriculas.get(i).getNotaDefinitiva());
-            fila.add(matriculas.get(i).getFechaInscripcion());
-            fila.add(matriculas.get(i).getFechaInicio());
-            fila.add(matriculas.get(i).getFechaFinal());
-            String inf = "";
-            if(matriculas.get(i).getEstado() == 0){
-                inf = "Matriculada";
-            }else if(matriculas.get(i).getEstado() == 1){
-                inf = "Cursando";
-            }else if(matriculas.get(i).getEstado() == 2){
-                inf = "Reprobada";
-            }else if(matriculas.get(i).getEstado() == 3){
-                inf = "Aprobada";
+                //fila.add(ServicioLocalEstudiante.getServicio().buscarEstudiante(matriculas.get(i).getPkEstudiante()).getNombres());
+                //fila.add(ServicioLocalMateria.getServicio().darMateriaPorCodigo(matriculas.get(i).getPkMateria()).getNombre());
+                fila.add(matriculas.get(i).getNotaDefinitiva());
+                fila.add(matriculas.get(i).getFechaInscripcion());
+                fila.add(matriculas.get(i).getFechaInicio());
+                fila.add(matriculas.get(i).getFechaFinal());
+                String inf = "";
+                if(matriculas.get(i).getEstado() == 0){
+                    inf = "Matriculada";
+                }else if(matriculas.get(i).getEstado() == 1){
+                    inf = "Cursando";
+                }else if(matriculas.get(i).getEstado() == 2){
+                    inf = "Reprobada";
+                }else if(matriculas.get(i).getEstado() == 3){
+                    inf = "Aprobada";
+                }
+                fila.add(inf);
+                modelo.addRow(fila);
             }
-            fila.add(inf);
-            modelo.addRow(fila);
         }
-         repaint();
+        repaint();
     }
     
     
