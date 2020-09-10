@@ -1,10 +1,11 @@
 # SOA_REPOSITORY_RESTFUL
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-Este repositorio contiene un servidor rest hecho en java más dos clientes que lo consumen desde PHP Y JAVA
 
-| REPOSITORIO | LENGUAJE | IDE | VERSIÓN IDE | VERSIÓN LENGUAJE |
+Este repositorio hace parte de una serie de proyectos realizados para la asignatura SOA. Se desarrollo 1 servidor utilizado tecnologia REST, lanzando así servicios RESTFUL, y dos clientes en diferentes lenguajes de programación que consumen dichos servicios.
+
+| REPOSITORIO | LENGUAJE | VERSIÓN LENGUAJE | IDE | VERSIÓN IDE |
 | ------ | ------ | ------ | ------ | ------ |
-| CLIENTE_JAVA_RESTFUL | JAVA | NETBEANS | 8.0.2 | JDK8 |
-| CLIENTE_PHP_RESTFUL | PHP | SUBLIME TEXT | 3.0 | PHP7 UP |
-| SERVIDOR_JAVA_RESTFUL | JAVA | JDEVELOPER | 12.1.3 | JDK7 |
+| CLIENTE_JAVA_RESTFUL | JAVA | JDK8 | NETBEANS | 8.0.2 |
+| CLIENTE_PHP_RESTFUL | PHP | PHP7 UP | SUBLIME TEXT | 3.0 |
+| SERVIDOR_JAVA_RESTFUL | JAVA |  JDK7 | JDEVELOPER | 12.1.3 |
