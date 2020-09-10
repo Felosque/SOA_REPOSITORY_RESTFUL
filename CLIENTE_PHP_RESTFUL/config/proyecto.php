@@ -1,0 +1,2 @@
+<?php $proyecto = "ProyectoServiciosWeb/resources/";
+
